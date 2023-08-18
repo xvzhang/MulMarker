@@ -1,5 +1,5 @@
 chatbotParm = {
-	'openai.api_key': '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',
+	'openai.api_key': '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',
 	'prompt': "Your name is MulMarker. You are a helpful assistant."
 
 }
