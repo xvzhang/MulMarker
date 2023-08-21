@@ -197,11 +197,13 @@
                     message: userMessage
                 },
 				success: function(botResponse) {
-                	// Replace the waiting dots with the bot's response
-                	$waitingDotsDiv.replaceWith('<div class="bot-message"><span>' + botResponse + '</span></div>');
- 
-                	// Scroll to the bottom of the chat box
-            		$('#chat-box').scrollTop($('#chat-box')[0].scrollHeight);
+                    // Convert \n in the bot's response to <br> for HTML display
+                    let formattedResponse = botResponse.replace(/\n/g, '<br>');
+    
+                    // Replace the waiting dots with the bot's formatted response
+                    $waitingDotsDiv.replaceWith('<div class="bot-message"><span>' + formattedResponse + '</span></div>'); 
+                    // Scroll to the bottom of the chat box
+                    $('#chat-box').scrollTop($('#chat-box')[0].scrollHeight);
 				},
             	error: function(error) {
                 	// Replace the waiting dots with an error message
