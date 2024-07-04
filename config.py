@@ -1,5 +1,5 @@
 chatbotParm = {
-	'Your chatbot key': 'XXXXXXXXXXXXXXXXXXXXXXXXXXX',
+	'openai.api_key': 'XXXXXXXXXXXXXXXXXXXXXXXXXXX',
 }
 
 Qprompt = """
